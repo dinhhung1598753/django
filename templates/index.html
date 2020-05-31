@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>My Django</title>
+</head>
+<body>
+<h1>WELLCOME</h1>
+
+<h2>Nhà Sản Xuất</h2>
+<table style="width:50%">
+  <tr>
+    <th>Id</th>
+    <th>Nhà Sản Xuất</th>
+  </tr>
+  {% for item in h %}
+  <tr>
+    <td> {{ item.id }}</td>
+    <td> {{ item.name }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+
+<h2>Sản Phẩm</h2>
+
+<table style="width:50%">
+  <tr>
+    <th>Mã sản phẩm</th>
+    <th>Sản phẩm</th>
+    <th>Giá</th>
+    <th>Nhà sản xuất</th>
+  </tr>
+  {% for item in h1 %}
+  <tr>
+    <td> {{ item.ma_sp }}</td>
+    <td> {{ item.ten_sp }}</td>
+    <td> {{ item.gia }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
