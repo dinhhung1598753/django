@@ -1,9 +1,17 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <style>
+body  {
+  background-image: url(" {% static 'l.jpg' %}")    ;
+  text-align: center;
+}
 table {
+  border: 1px solid black;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 400px;
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -15,9 +23,6 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -25,6 +30,8 @@ tr:nth-child(even) {
 </head>
 <body>
 <h1>WELLCOME</h1>
+
+<a href="{% url 'index' %}"> Admin </a>
 
 <h2>Nhà Sản Xuất</h2>
 <table style="width:50%">
@@ -49,7 +56,6 @@ tr:nth-child(even) {
     <th>Mã sản phẩm</th>
     <th>Sản phẩm</th>
     <th>Giá</th>
-    <th>Nhà sản xuất</th>
   </tr>
   {% for item in h1 %}
   <tr>

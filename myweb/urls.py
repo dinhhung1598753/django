@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp.views import NSX
+from myapp.views import NSX, NSXX
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', NSX.as_view()),
+    path('index/', NSXX.as_view(), name ="index"),
 
 
 ]

@@ -14,3 +14,15 @@ class NSX(View):
         }
 
         return render(request, 'index.html', text)
+
+class NSXX(View):
+
+    def get(self, request):
+        nst = NhaSanXuat.objects.all()
+        sp = MatHang.objects.all()
+        text = {
+            'h':nst,
+            'h1': sp
+        }
+
+        return render(request, 't.html', text)
